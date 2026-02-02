@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:text="Delete City"
         android:layout_marginBottom="16dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/AddCity" />
 
