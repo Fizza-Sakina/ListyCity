@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.EditText;
+import android.app.AlertDialog;            
+import android.content.DialogInterface; 
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -60,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                             cityAdapter.notifyDataSetChanged();
                         }
                       }
-                    })
+                    });
                     builder.setNegativeButton("Escape", null)
                     builder.show();
         });
