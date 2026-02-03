@@ -29,7 +29,8 @@
         android:layout_marginBottom="16dp"
         android:layout_marginLeft="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
+    </Button>
 
     <Button
         android:id="@+id/DeleteCity"
@@ -38,8 +39,8 @@
         android:text="Delete City"
         android:layout_marginBottom="16dp"
         android:layout_marginLeft="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/AddCity" />
+        app:layout_constraintBottom_toBottomOf="parent">
+    </Button>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
