@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         dataList.addAll(Arrays.asList(cities));
         cityAdapter = new ArrayAdapter<>(this, R.layout.content, dataList);
         cityList.setAdapter(cityAdapter);
-
         AddCity = findViewById(R.id.AddCity);
         DeleteCity = findViewById(R.id.DeleteCity);
 
@@ -47,23 +46,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         AddCity.setOnClickListener(v -> {
-            final android.widget.EditText GetInput = new android.widget.EditText(this);
-
-            new android.app.AlertDialog.Builder(this)
-                    .setTitle("Add New City")
-                    .setMessage("Please enter the name of the city")
-                    .setView(GetInput)
-                    .setPositiveButton("Enter", (dialog, which) -> {
+            final EditText GetInput = new EditText(MainActivity.this);
+            AlertDialog.Builder tempBuilder= new AlertDialog.Builder(MainActivity.this);
+            builder.setTitle("Add New City")
+            builder.setMessage("Please enter the name of the city")
+            builder.setView(GetInput)
+            builder.setPositiveButton("Enter", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which){
                         String CityName = GetInput.getText().toString();
-
                         if (!CityName.isEmpty()) {
                             dataList.add(CityName);
                             cityAdapter.notifyDataSetChanged();
                         }
-
+                      }
                     })
-                    .setNegativeButton("Escape", null)
-                    .show();
+                    builder.setNegativeButton("Escape", null)
+                    builder.show();
         });
 
 
